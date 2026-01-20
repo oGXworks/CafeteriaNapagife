@@ -32,91 +32,19 @@
   <link rel="manifest" href="manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
 
-  <style>
-    :root {
-      --marrom: #5a3825;
-      --bege: #f5efe6;
-      --caramelo: #c89b6d;
-      --verde: #6b8e23;
-      --escuro: #2b1b12;
-    }
+  <!-- Analytics: descomente e substitua MEASUREMENT_ID se quiser usar Google Analytics 4 -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+  -->
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(rgba(245,239,230,0.9), rgba(245,239,230,0.9)), url('napagife.jpg') center/cover fixed no-repeat;
-      color: var(--escuro);
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') center/cover no-repeat;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #fff;
-    }
-
-    header h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 20px; }
-    header p { font-size: 1.2rem; max-width: 600px; margin: auto; }
-
-    nav {
-      position: fixed; top: 0; width: 100%; background-color: rgba(43, 27, 18, 0.9);
-      padding: 15px 0; z-index: 1000;
-    }
-    nav ul { display:flex; justify-content:center; list-style:none; gap:30px; }
-    nav a { color:#fff; text-decoration:none; font-weight:500; transition: color 0.3s; }
-    nav a:hover { color:var(--caramelo); }
-
-    .nav-toggle { position: fixed; left: 16px; top: 12px; z-index:1100; background:transparent; border:none; color:#fff; font-size:1.4rem; display:none; }
-
-    section { padding: 80px 10%; }
-
-    .sobre { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
-
-    .instagram-float { position: fixed; bottom: 25px; right: 25px; width:60px; height:60px; background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af); border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 20px rgba(0,0,0,0.3); z-index:2000; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .instagram-float img { width:30px; height:30px; }
-    .instagram-float:hover { transform:scale(1.1); box-shadow:0 12px 30px rgba(0,0,0,0.4); }
-
-    .sobre img { width:100%; border-radius:15px; }
-    .sobre h2 { font-family:'Playfair Display', serif; font-size:2.8rem; margin-bottom:25px; color:var(--marrom); }
-    .sobre p { font-size:1.25rem; line-height:1.9; max-width:100%; }
-
-    .menu { background-color:#fff; border-radius:20px; padding:40px; }
-    .menu h2 { text-align:center; font-family:'Playfair Display', serif; font-size:2.5rem; margin-bottom:50px; color:var(--marrom); }
-    .itens-menu { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; }
-    .item { background-color:var(--bege); padding:24px; border-radius:20px; box-shadow:0 10px 25px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .item:hover { transform: translateY(-10px) scale(1.03); box-shadow:0 20px 40px rgba(0,0,0,0.2); }
-    .item h3 { font-size:1.6rem; margin-bottom:10px; color:var(--marrom); }
-    .item p { font-size:1.05rem; }
-    .item span { font-size:1.2rem; font-weight:bold; color:var(--verde); display:block; margin-top:10px; }
-
-    .btn-whatsapp { display:inline-block; margin-top:12px; padding:8px 12px; background: #25D366; color:#fff; border-radius:8px; text-decoration:none; font-weight:600; }
-    .ambiente { background: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085') center/cover fixed no-repeat; color:#fff; text-align:center; padding:80px 10%; }
-    .contato { background-color:#fff; border-radius:20px; padding:40px; }
-    .contato h2 { text-align:center; font-family:'Playfair Display', serif; font-size:2.5rem; margin-bottom:30px; color:var(--marrom); }
-
-    form { max-width:600px; margin:auto; display:flex; flex-direction:column; gap:15px; }
-    input, textarea, button { padding:12px; border-radius:10px; border:1px solid #ccc; font-family:'Poppins', sans-serif; }
-    button { background-color:var(--marrom); color:#fff; border:none; cursor:pointer; font-weight:500; transition: background 0.3s; }
-    button:hover { background-color:var(--caramelo); }
-
-    footer { background-color:var(--escuro); color:#fff; text-align:center; padding:30px 10px; margin-top:50px; }
-
-    .skip-link { position:absolute; left:-999px; top:auto; background:#fff; color:#000; padding:8px; z-index:9999; }
-    .skip-link:focus { left:10px; top:10px; border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
-
-    @media (max-width:768px) {
-      .sobre { grid-template-columns:1fr; }
-      header h1 { font-size:2.8rem; }
-      .nav-toggle { display:block; }
-      nav ul { display:none; flex-direction:column; gap:10px; padding:12px; }
-      nav ul.open { display:flex; background: rgba(43,27,18,0.95); position: absolute; top:56px; left:0; right:0; }
-    }
-  </style>
 </head>
 <body>
 
@@ -291,6 +219,6 @@
     </a>
   </footer>
 
-  <script src="scripts.js"></script>
+  <script src="/scripts.js"></script>
 </body>
 </html>
