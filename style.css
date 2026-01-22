@@ -1,20 +1,20 @@
-document.querySelectorAll('.btn-whatsapp[data-product]').forEach(a => {
-  const product = a.dataset.product;
-  const phone = '551126562371';
-  const text = encodeURIComponent(`Olá! Gostaria de pedir: ${product}`);
-  a.href = `https://wa.me/${phone}?text=${text}`;
-  a.target = '_blank';
-  a.rel = 'noopener noreferrer';
+documentdocument.querySelectorAll('.btn-whatsapp[data-product]').forEach(a = > {
+  const produto = a.dataset.product ;
+  telefone const = '551126562371' ;
+  const text = encodeURIComponent(`Olá! Gostaria de pede : ${produto}`);
+  a.href = `https : / / wa.me / ${phone}? texto = ${text}`;
+  a.target = '_blank''_blank' ;
+  a.rel rel= 'noopener noreferrer' ;
 });
 
-@media (max-width: 768px) {
+@media (max-widthmax-largura : 768 px) {
   nav ul {
-    display: none;
-    flex-direction: column;
-    background: rgba(43,27,18,0.95);
+    exposição : nenhum;
+    flex-direction : coluna;
+    background : rgbargba(43,27,27,18,0.950.95);
   }
 
   nav ul.open {
-    display: flex;
+    exposição: :flexão;
   }
 }
