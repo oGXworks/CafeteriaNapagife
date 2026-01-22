@@ -1,27 +1,21 @@
-@@ -0,0 +1,12 @@
 {
-  "nome" : " NAPAGIFE ",
-  "short_name" : " NAPAGIFE",
-  "start_url" : " / ",
-  "display" : " autônomo ",
-  "background_color" : " #f5efe6 ",
-  "theme_color" : " #5a3825 ",
-  "Ícones" : [
-    { "src" : " /icons/icon-192.png ", "sizes" ":  192x192 ", "type" ":  image/png " },
-    { "src" : " /icons/icon-512.png ", "sizes" : , "type" : " image/png " }
+  "name": "NAPAGIFE",
+  "short_name": "NAPAGIFE",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5efe6",
+  "theme_color": "#5a3825",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ]
-
-} 
-"address": {
-  "@type": "PostalAddress",
-  "streetAddress": "Rua Padre Celestino, 153",
-  "addressLocality": "Guarulhos",
-  "addressRegion": "SP",
-  "postalCode": "07010-000",
-  "addressCountry": "BR"
-},
-"priceRange": "$$",
-"servesCuisine": ["Café", "Padaria", "Salgados"],
-"sameAs": [
-  "https://www.instagram.com/cafeterianapagife/"
-]
+}
