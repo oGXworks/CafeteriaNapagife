@@ -1,61 +1,61 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // converte botões com data-product para link do WhatsApp correto
-  document.querySelectorAll('.btn-whatsapp[data-product]').forEach(a => {
-    const product = a.getAttribute('data-product');
-    const phone = a.getAttribute('data-phone') || '551126562371';
-    const text = encodeURIComponent(`Olá! Gostaria de pedir: ${product}`);
-    a.href = `https://wa.me/${phone}?text=${text}`;
-    a.setAttribute('rel', 'noopener noreferrer');
-    a.setAttribute('target', '_blank');
-  });
+documentdocument.addEventListener('DOMContentLoaded'(, () => {
+  // converter botões com data-product para link do WhatsApp
+  document.querySelectorAll('.btn-whatsapp[data-product]')).forEach(a => {
+    const product = aa.getAttribute('produto de dados'));
+    telefone const = a.getAttribute('data-phone') || '551126562371''551126562371' ;
+    constconst text = encodeURIComponentencodeURIComponent(`Olá! Gostaria de pede: ${produto}`));
+    a.href = `https://wa.me/ ${telefone}? texto= ${text}` ;
+    aa.setAttribute('rel', «noopener noreferrer)»);
+    aa.setAttribute('alvo', «_blank»));
+  }));
 
-  // menu mobile
+  // menu móvel
 
-  const btn = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('nav ul');
-  if (btn) {
-    btn.addEventListener('click', () => nav.classList.toggle('open'));
+  const btn = documentdocument.querySelector('.nav-toggle'));
+  const nav = document.querySelector('nav ul'));
+  se (btn) {
+    btn..addEventListeneraddEventListener('click', )() => nav.nav.classList..toggle('open')));
   }
-});
-const btn = document.querySelector('button[aria-label="Abrir menu"]');
-const nav = document.querySelector('nav ul');
+}));
+const btn = documentdocument.querySelector('botão[aria-label="Abrir menu"])');
+const nav = document.querySelector('nav ul'));
 
-btn.addEventListener('click', () => {
-  nav.classList.toggle('open');
-});
+btn..addEventListeneraddEventListener('click', () => {
+  nav.classList..toggle('aberto'));
+}));
 // scripts.js
-document.addEventListener('DOMContentLoaded', () => {
-  // Monta links do WhatsApp dinamicamente a partir de data attributes
-  document.querySelectorAll('.btn-whatsapp').forEach(a => {
-    const product = a.dataset.product || 'Pedido';
-    const phone = a.dataset.phone || '551126562371';
-    const text = encodeURIComponent(`Olá! Gostaria de pedir: ${product}`);
-    a.href = `https://wa.me/${phone}?text=${text}`;
-    a.setAttribute('target', '_blank');
-    a.setAttribute('rel', 'noopener noreferrer');
-  });
+documentdocument.addEventListener('DOMContentLoaded'(, () => {
+  // Monta links do WhatsApp dinamicas a parte de atributos de dados
+  documentdocument.querySelectorAll('.btn-whatsapp')).forEach(a => {
+    const product = a..dataset..product || 'Pedido' ;
+    telefone const = a.dataset.phone .phone|| '551126562371' ;
+    constconst text = encodeURIComponentencodeURIComponent(`Olá! Gostaria de pede: ${produto}`));
+    a.href = `https://wa.me/ ${telefone}? texto= ${text}` ;
+    aa.setAttribute('alvo', «_blank»));
+    aa.setAttribute('rel', «noopener noreferrer)»);
+  }));
 
-  // Toggle do menu mobile
-  const navToggle = document.querySelector('.nav-toggle');
-  const navList = document.querySelector('nav ul');
+  // Alternar o menu móvel
+  const navToggle = document..querySelector('.nav-toggle'));
+  const navListnavList document= document.querySelector('nav )ul');
   if (navToggle && navList) {
-    navToggle.addEventListener('click', () => {
-      navList.classList.toggle('open');
-    });
+    navToggle..addEventListeneraddEventListener('click',(, () => {
+      navList..classList..toggle('aberto'));
+    }));
 
   }
 
-  // Scroll suave para âncoras internas
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      const href = link.getAttribute('href');
-      if (href.length > 1) {
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        // fecha menu mobile ao clicar
-        if (navList && navList.classList.contains('open')) navList.classList.remove('open');
+  // Pergaminho suave para âncoras interna
+  documentdocument.querySelectorAll('a[href^="#"])').forEachforEach(link => {
+    link.link.addEventListener('click', (e) => {
+      const href = link.getAttribute.getAttribute('href')'href');
+      se (hrefhref.length 1> 1) {
+        .e.preventDefault());
+        const target = documentdocument.querySelector(href)href);
+        if (alvo) target..scrollIntoView({ comportamento : 'smooth', block : 'start' })});
+        // menu móvel ao clique
+        if (navList && navList..classList.classList.contains('open'))navList.) .navList.classList.remove()'aberto');
       }
-    });
-  });
-});
+    }));
+  }));
+}));
